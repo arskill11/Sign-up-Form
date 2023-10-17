@@ -16,7 +16,7 @@ html {
 }
 
 .logo-container {
-    height: 100%;
+    min-height: 100vh;
     width: 40%;
     display: flex;
     color: white;
@@ -42,22 +42,21 @@ html {
 
 .odin-name {
     font-size: 6rem;
-    opacity: 1;
     font-family: norse-bold, sans-serif;
-    padding: 3.5rem 0 0 0;
+    align-self: center;
+    /*padding: 3.5rem 0 0 0;*/
 }
 
 .form-container {
     background-color: hsl(0, 0%, 96%);
     width: 60%;
-    height: 100vh;
     /*padding-left: 5rem;
     padding-right: 8rem;*/
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 50px;
-    min-width: 500px;
+    min-width: 550px;
 }
 
 .form-container .text {
@@ -77,16 +76,20 @@ html {
     row-gap: 20px;
     column-gap: 70px;
     align-self: center; 
-    flex: 1 0 auto;
 }
 
 form {
     box-sizing: border-box;
     gap: 20px;
-    background-color: white;
-    box-shadow: 10px 5px 3px rgb(222, 222, 222);
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.backgr {
+    background-color: white;
+    box-shadow: 10px 5px 3px rgb(222, 222, 222);
+    padding-bottom: 30px;
 }
 
 .inpt {
@@ -114,17 +117,23 @@ label {
     font-weight: 600;
 }
 
-input:valid {
+input:valid:focus {
     border: 2px solid rgb(113, 199, 113);
 }
 
-input:invalid {
+input:invalid:focus {
     border: 2px solid rgb(224, 72, 72);
 }
 
+input:required {
+    border: 1px solid #E5E7EB;
+}
+
+
 input:focus {
+    outline: none;
     border: 2px solid rgb(126, 216, 255);
-    box-shadow: 3px 3px 2px rgb(104, 210, 255);
+    box-shadow: 2px 2px 2px rgb(65, 145, 179);
 }
 
 button {
